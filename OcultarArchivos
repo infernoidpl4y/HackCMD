@@ -1,0 +1,25 @@
+//Sencillo
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+
+void mensaje(char *texto,char *titulo){
+	MessageBox(NULL,texto,titulo,MB_OK);
+}
+
+int main() {
+        
+	system("ATTRIB +h C:\\* /S /D"); //En C:\\* puedes agregar cualquier direcccion o Disco 
+        mensaje("Archivos Ocultados","Mensaje");
+
+	return 0;
+}
+/*Nota:
+ATTRIB +h : es ocultar
+ATTRIB -h : es desocultar
+/S /D     : son obligatorios
+
+Ejemplo:
+ATTRIB +h C:\\carpeta\* /S /D : oculta todos los archivos y subcarpetas en C:\\carpeta.
+*/
